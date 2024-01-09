@@ -10,6 +10,19 @@
 
   gtag('config', 'G-0KL5W0DQ60');
 </script>
+    <script>
+    function checkPassword() {
+      var enteredPassword = prompt("Enter the password:");
+      var correctPassword = "E&A&P@CuzSquad24"; // Replace with your actual password
+
+      if (enteredPassword === correctPassword) {
+        alert("Thank you for entering the password. You will now be redirected to the page.");
+      } else {
+        alert("Access Denied. You will now be taken to https://google.com");
+        window.location.href = "https://www.google.com"; // Redirect to another page or URL if password is incorrect
+      }
+    }
+  </script>
 <title>Home - TCS</title>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7133361591463802"
      crossorigin="anonymous"></script>
