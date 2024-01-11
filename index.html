@@ -30,43 +30,22 @@
      <link rel="icon" type="image/x-icon" href="cdn/img/favicon.png">
 </head>
 <body>
-  <center>
-         <input type="password" placeholder="passcode" id="tutorial">
-         <button onclick="protectpasscode()">CHECK</button>
-         <script>
-            function protectpasscode() {
-               const result = document.getElementById("tutorial").value;
-               let passcode = E&A&P@CuzSquad24;
-               let space = '';
-               if (result == space) {
-                  alert("Type passcode")
-               } else {
-                  if (result == passcode) {
-                     document.write("<center><h1>TP, The Best E-Learning </h1></center>");
-                  } else {
-                     alert("Incorrect Passcode");
-                     location.reload();
-                  }
-               }
-            }
-         </script>
-      </center>
-   <script>
-         var password = "tutorial";
-         (function passcodeprotect() {
-            var passcode = prompt("Enter PassCode");
-            while (passcode !== E&A&P@CuzSquad24) {
-               alert("Incorrect PassCode");
-               return passcodeprotect();
-            }
-         }());
-         alert('Welcome To The Cuz Squad!');
-      </script>
-    <!-- Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFLHTTMD"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-<style>
+
+<script>
+  // Define your password
+  const correctPassword = "E&A&P@CuzSquad24";
+
+  // Prompt user for password
+  const enteredPassword = prompt("This website is password-protected. Please enter the password to access this website.");
+
+  // Check if the entered password is correct
+  if (enteredPassword === correctPassword) {
+    // Display content if the password is correct
+    document.body.innerHTML = "<style>
 p {
   color: rgb(0, 0, 0);
   text-align: left;
@@ -132,6 +111,15 @@ p {
   </div>
   
   <img src="cdn/img/pages/Home Page.png" alt="Home Page" width="1520" height="650">
+";
+  } else {
+    // Redirect or display an error message if the password is incorrect
+    alert("403: Forbidden");
+    // You may choose to redirect to another page or handle it differently.
+    // Example: window.location.href = "another-page.html";
+  }
+</script>
+  
 
 </body>
 </html>
