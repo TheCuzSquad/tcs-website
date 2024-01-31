@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,14 +7,14 @@
   <title>Your Auth0 Integrated Website</title>
 
   <!-- Auth0 Library -->
-  <script src="https://cdn.auth0.com/js/auth0/latest/auth0.min.js"></script>
+  <script src="https://cdn.auth0.com/js/auth0/9.16/auth0.min.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const auth0 = new Auth0({
         domain: 'dev-d4pu8jsia2w15ie6.us.auth0.com',
         clientID: 'Tv3xq3MDnAibaRHh5IpkZVAfOiI62UBY',
-        redirectUri: 'https://thecuzsquad.online/home.html',
+        redirectUri: 'http://thecuzsquad.online/home.html',
         responseType: 'token id_token',
         scope: 'openid profile email',
       });
@@ -26,8 +25,6 @@
 
       auth0.parseHash((err, authResult) => {
         if (authResult && authResult.accessToken && authResult.idToken) {
-          // Handle successful login
-          // You may want to save tokens to use for authentication
           console.log('Login successful');
         } else if (err) {
           console.error(err);
@@ -36,15 +33,12 @@
 
       function checkAuthentication() {
         if (auth0.isAuthenticated()) {
-          // User is authenticated, allow access
           console.log('User is authenticated');
         } else {
-          // Redirect to login page or show login button
           console.log('User is not authenticated');
         }
       }
 
-      // Call the checkAuthentication function to determine user's authentication status
       checkAuthentication();
     });
   </script>
@@ -53,10 +47,7 @@
 <body>
   <h1>Your Auth0 Integrated Website</h1>
 
-  <button onclick=function login() {
-  console.log('Button clicked!');
-  auth0.authorize();
-}"login()">Login with Auth0</button>
+  <button onclick="login()">Login with Auth0</button>
 
   <!-- Add your website content here -->
 
