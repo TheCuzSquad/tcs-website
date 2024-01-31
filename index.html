@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- CDN -->
+<script src="https://cdn.auth0.com/js/auth0/your-auth0-version/auth0.min.js"></script>
+
+  
+<script>
+  const auth0 = new Auth0({
+    domain: 'dev-d4pu8jsia2w15ie6.us.auth0.com',
+    clientID: 'Tv3xq3MDnAibaRHh5IpkZVAfOiI62UBY',
+    redirectUri: 'http://thecuzsquad.online/home.html',
+    responseType: 'token id_token',
+    scope: 'openid profile email',
+  });
+</script>
+
+
+  <script>
+  function login() {
+    auth0.authorize();
+  }
+</script>
+</head>
+<body>
+
+<!-- Button -->
+  <button onclick="login()">Login with Auth0</button>
+  
+</body>
+
+</html>
