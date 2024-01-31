@@ -53,7 +53,10 @@
 <body>
   <h1>Your Auth0 Integrated Website</h1>
 
-  <button onclick="login()">Login with Auth0</button>
+  <button onclick=function login() {
+  console.log('Button clicked!');
+  auth0.authorize();
+}"login()">Login with Auth0</button>
 
   <!-- Add your website content here -->
 
