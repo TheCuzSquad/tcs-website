@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,7 @@
       const auth0 = new Auth0({
         domain: 'dev-d4pu8jsia2w15ie6.us.auth0.com',
         clientID: 'Tv3xq3MDnAibaRHh5IpkZVAfOiI62UBY',
-        redirectUri: 'http://thecuzsquad.online/home.html',
+        redirectUri: 'https://thecuzsquad.online/home.html',
         responseType: 'token id_token',
         scope: 'openid profile email',
       });
@@ -47,11 +48,10 @@
       checkAuthentication();
     });
   </script>
-  <title>Login to access content</title>
 </head>
 
 <body>
-  <h1>Login to access content</h1>
+  <h1>Your Auth0 Integrated Website</h1>
 
   <button onclick="login()">Login with Auth0</button>
 
